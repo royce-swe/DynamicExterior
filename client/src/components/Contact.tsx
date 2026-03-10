@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
 } from "@/components/ui/select";
 import { Phone, Mail, MapPin } from "lucide-react";
 import type { ContactMessageInput } from "@shared/routes";
@@ -69,9 +69,9 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Call Us</h4>
-                  <p className="text-slate-600">Available Mon-Sat, 8am - 6pm</p>
+                  <p className="text-slate-600">Available Mon-Sun, 8am - 6pm</p>
                   <a href="tel:+18138208981" className="text-primary font-semibold hover:underline mt-1 inline-block">
-                  +1 (813) 820-8981
+                    +1 (813) 820-8981
                   </a>
                 </div>
               </div>
@@ -83,8 +83,8 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Email Us</h4>
                   <p className="text-slate-600">We'll reply within 24 hours</p>
-                  <a href="mailto:hello@thedynamicexterior.com" className="text-primary font-semibold hover:underline mt-1 inline-block">
-                    hello@thedynamicexterior.com
+                  <a href="mailto:contact@thedynamicexterior.com" className="text-primary font-semibold hover:underline mt-1 inline-block">
+                    contact@thedynamicexterior.com
                   </a>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Service Area</h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Proudly serving the Lake Mary area and surrounding suburbs.
+                    Proudly serving Lake Mary and the surround area.
                   </p>
                 </div>
               </div>
@@ -106,14 +106,14 @@ export function Contact() {
           {/* Contact Form */}
           <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Request a Quote</h3>
-            
+
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input 
-                    id="name" 
-                    placeholder="John Doe" 
+                  <Input
+                    id="name"
+                    placeholder="John Doe"
                     {...form.register("name")}
                     className={`bg-white ${form.formState.errors.name ? "border-red-500" : ""}`}
                   />
@@ -123,9 +123,9 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input 
-                    id="phone" 
-                    placeholder="(555) 123-4567" 
+                  <Input
+                    id="phone"
+                    placeholder="(555) 123-4567"
                     {...form.register("phone")}
                     className={`bg-white ${form.formState.errors.phone ? "border-red-500" : ""}`}
                   />
@@ -137,10 +137,10 @@ export function Contact() {
 
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="john@example.com" 
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="john@example.com"
                   {...form.register("email")}
                   className={`bg-white ${form.formState.errors.email ? "border-red-500" : ""}`}
                 />
@@ -170,9 +170,9 @@ export function Contact() {
 
               <div className="space-y-2">
                 <Label htmlFor="message">Message details (optional)</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell us a bit about your property (e.g., number of stories, specific areas needing attention)..." 
+                <Textarea
+                  id="message"
+                  placeholder="Tell us a bit about your property (e.g., number of stories, specific areas needing attention)..."
                   className="bg-white min-h-[120px] resize-none"
                   {...form.register("message")}
                 />
@@ -181,9 +181,9 @@ export function Contact() {
                 )}
               </div>
 
-              <Button 
-                type="submit" 
-                size="lg" 
+              <Button
+                type="submit"
+                size="lg"
                 className="w-full text-base h-14 rounded-xl shadow-lg shadow-primary/25 hover:-translate-y-0.5 transition-transform"
                 disabled={createMessage.isPending}
               >
