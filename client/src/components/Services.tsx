@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const services = [
   {
     title: "Residential Window Cleaning",
-    description: "Inside and out, we leave your home's windows spotless, streak-free, and gleaming. Screens and sills included.",
+    description: "We leave your home's exterior windows spotless, streak-free, and gleaming for a brighter view.",
     icon: Home,
   },
   {
@@ -19,8 +19,8 @@ const services = [
     icon: SprayCan,
   },
   {
-    title: "Gutter Cleaning",
-    description: "Protect your home from water damage. We remove debris, unblock downspouts, and ensure proper flow.",
+    title: "Screen Cleaning",
+    description: "Keep your screens crystal clear. We remove dust, pollen, and grime to improve visibility and airflow.",
     icon: Droplets,
   },
 ];
