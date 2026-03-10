@@ -70,8 +70,8 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Call Us</h4>
                   <p className="text-slate-600">Available Mon-Sat, 8am - 6pm</p>
-                  <a href="tel:555-0123" className="text-primary font-semibold hover:underline mt-1 inline-block">
-                    (555) 123-4567
+                  <a href="tel:+18138208981" className="text-primary font-semibold hover:underline mt-1 inline-block">
+                  +1 (813) 820-8981
                   </a>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Service Area</h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Proudly serving the greater metropolitan area and surrounding suburbs.
+                    Proudly serving the Lake Mary area and surrounding suburbs.
                   </p>
                 </div>
               </div>
