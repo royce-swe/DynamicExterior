@@ -96,7 +96,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Service Area</h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Proudly serving Lake Mary and the surround area.
+                    Proudly serving Lake Mary and the surrounding area.
                   </p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export function Contact() {
 
           {/* Contact Form */}
           <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Request a Quote</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">Request a Quote or Contact Us</h3>
 
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -159,6 +159,7 @@ export function Contact() {
                     <SelectItem value="Residential Window Cleaning">Residential Window Cleaning</SelectItem>
                     <SelectItem value="Commercial Window Cleaning">Commercial Window Cleaning</SelectItem>
                     <SelectItem value="Screen Cleaning">Screen Cleaning</SelectItem>
+                    <SelectItem value="Other Inquiry">Other Inquiry</SelectItem>
                   </SelectContent>
                 </Select>
                 {form.formState.errors.service && (

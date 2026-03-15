@@ -32,8 +32,11 @@ declare module "express-session" {
 // CORS — must come before routes & session
 const allowedOrigins = [
   "https://dynamic-exterior.vercel.app",
-  // Add custom domains here, e.g.:
-  // "https://www.thedynamicexterior.com",
+  "https://www.thedynamicexterior.com",
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "http://localhost:5000",
+  "http://127.0.0.1:5000",
 ];
 
 app.use(

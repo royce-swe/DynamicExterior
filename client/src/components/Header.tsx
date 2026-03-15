@@ -23,17 +23,21 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-3" : "bg-transparent py-5"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "glass py-3" : "bg-transparent py-5"
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="bg-primary text-white p-2 rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-md shadow-primary/20">
+            <img
+              src="/favicon.png"
+              alt="Dynamic Exterior"
+              className="h-10 w-auto"
+            />
+            {/* <div className="bg-primary text-white p-2 rounded-xl group-hover:scale-105 transition-transform duration-300 shadow-md shadow-primary/20">
               <Droplets size={24} strokeWidth={2.5} />
-            </div>
+            </div> */}
             <span className="font-display font-bold text-xl sm:text-2xl tracking-tight text-slate-900">
               thedynamic<span className="text-primary">exterior</span>
             </span>
