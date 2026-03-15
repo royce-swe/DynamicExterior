@@ -158,9 +158,7 @@ export function Contact() {
                   <SelectContent>
                     <SelectItem value="Residential Window Cleaning">Residential Window Cleaning</SelectItem>
                     <SelectItem value="Commercial Window Cleaning">Commercial Window Cleaning</SelectItem>
-                    <SelectItem value="Pressure Washing">Pressure Washing</SelectItem>
-                    <SelectItem value="Gutter Cleaning">Gutter Cleaning</SelectItem>
-                    <SelectItem value="Multiple Services">Multiple Services</SelectItem>
+                    <SelectItem value="Screen Cleaning">Screen Cleaning</SelectItem>
                   </SelectContent>
                 </Select>
                 {form.formState.errors.service && (
