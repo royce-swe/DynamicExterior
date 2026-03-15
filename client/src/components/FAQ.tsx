@@ -12,15 +12,15 @@ const faqs = [
   },
   {
     question: "How often should I have my windows cleaned?",
-    answer: "For residential properties, we recommend professional cleaning at least twice a year (spring and fall). For commercial properties or homes near busy streets/pollen-heavy areas, quarterly cleanings might be necessary to maintain a pristine look.",
+    answer: "For residential properties, we recommend professional cleaning trimesterally (every 4 months). For commercial properties or homes near busy streets/pollen-heavy areas, quarterly cleanings might be necessary to maintain a pristine look.",
   },
   {
     question: "Do I need to be home for the service?",
-    answer: "If we are only providing exterior services (like pressure washing or exterior window cleaning), you do not need to be home as long as we have access to the property and water spigots. For interior window cleaning, someone will need to grant us access.",
+    answer: "If we are only providing exterior services (like exterior window cleaning or screen cleaning), you do not need to be home as long as we have access to the property and water spigots. However, if screens require removal from the inside, someone will need to grant us access.",
   },
   {
-    question: "Are you fully insured?",
-    answer: "Absolutely. We carry comprehensive liability insurance and workers' compensation. This ensures total peace of mind for you and protection for your property while we are on site.",
+    question: "Do you offer contracts?",
+    answer: "Absolutely. We offer contracts for both residential and commercial properties for scheduled cleanings trimesterally or quarterly to ensure your property stays looking its best year-round.",
   },
   {
     question: "What happens if it rains on my scheduled day?",

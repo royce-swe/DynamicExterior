@@ -83,8 +83,8 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1">Email Us</h4>
                   <p className="text-slate-600">We'll reply within 24 hours</p>
-                  <a href="mailto:contact@thedynamicexterior.com" className="text-primary font-semibold hover:underline mt-1 inline-block">
-                    contact@thedynamicexterior.com
+                  <a href="mailto:dynamicexterior@gmail.com" className="text-primary font-semibold hover:underline mt-1 inline-block">
+                    dynamicexterior@gmail.com
                   </a>
                 </div>
               </div>
