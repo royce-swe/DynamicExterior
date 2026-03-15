@@ -2,12 +2,20 @@ import "dotenv/config";
 import express, { type Request, Response, NextFunction } from "express";
 import session from "express-session";
 import createMemoryStore from "memorystore";
+import cors from "cors";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const app = express();
 const httpServer = createServer(app);
+
+// Trust Railway's reverse proxy so secure cookies work
+if (isProduction) {
+  app.set("trust proxy", 1);
+}
 
 declare module "http" {
   interface IncomingMessage {
@@ -20,6 +28,29 @@ declare module "express-session" {
     isAdmin: boolean;
   }
 }
+
+// CORS — must come before routes & session
+const allowedOrigins = [
+  "https://dynamic-exterior.vercel.app",
+  // Add custom domains here, e.g.:
+  // "https://www.thedynamicexterior.com",
+];
+
+app.use(
+  cors({
+    origin: isProduction
+      ? (origin, callback) => {
+        // Allow requests with no origin (mobile apps, curl, etc.)
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error(`CORS: origin ${origin} not allowed`));
+        }
+      }
+      : true, // allow all origins in dev
+    credentials: true, // allow cookies cross-origin
+  }),
+);
 
 app.use(
   express.json({
@@ -44,8 +75,8 @@ app.use(
     }),
     cookie: {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax", // "none" required for cross-site cookies
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
     },
   }),
@@ -119,7 +150,8 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
-  httpServer.listen(port, "127.0.0.1", () => {
-    log(`serving on http://127.0.0.1:${port}`);
+  const host = isProduction ? "0.0.0.0" : "127.0.0.1";
+  httpServer.listen(port, host, () => {
+    log(`serving on http://${host}:${port}`);
   });
 })();
